@@ -11,6 +11,6 @@ if (global.in_menu = true)
 	draw_set_color(c_white)
 
 	draw_set_halign(fa_center)
-	draw_text(cx + 240,cy + 135,"Paused")
+	draw_text(cx + 240,cy + 135,"Menu")
 	draw_set_halign(fa_left)
 }

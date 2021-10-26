@@ -59,9 +59,12 @@ switch (stage)
 		{
 			stage += 1
 			timer = 0
-			audio_play_sound(snd_door_open,50,false)
-			audio_sound_gain(snd_door_open,0,0)
-			audio_sound_gain(snd_door_open,1 * index_get_gain(global.sound_volume_index,true),500)
+			if (!audio_is_playing(snd_door_open)) {
+				audio_play_sound(snd_door_open,50,false)
+				audio_sound_gain(snd_door_open,0,0)
+				audio_sound_gain(snd_door_open,1 * index_get_gain(global.sound_volume_index,true),500)
+			}
+			
 		}
 		break;
 		
@@ -75,7 +78,10 @@ switch (stage)
 		}
 		else
 		{
-			audio_play_sound(snd_door_slam,80,false)
+			if (!audio_is_playing(snd_door_slam)) {
+				audio_play_sound(snd_door_slam,80,false)
+			}
+			
 			audio_stop_sound(snd_door_open)
 			
 			cam_shake(5,0.25,0)
@@ -91,9 +97,11 @@ switch (stage)
 			stage += 1	
 			spd = 0
 			
-			audio_play_sound(snd_door_open,50,false)
-			audio_sound_gain(snd_door_open,0,0)
-			audio_sound_gain(snd_door_open,1 * index_get_gain(global.sound_volume_index,true),500)
+			if (!audio_is_playing(snd_door_open)) {
+				audio_play_sound(snd_door_open,50,false)
+				audio_sound_gain(snd_door_open,0,0)
+				audio_sound_gain(snd_door_open,1 * index_get_gain(global.sound_volume_index,true),500)
+			}
 		}
 		break;
 		
@@ -106,7 +114,9 @@ switch (stage)
 		}
 		else
 		{
-			audio_play_sound(snd_door_slam,80,false)
+			if (!audio_is_playing(snd_door_slam)) {
+				audio_play_sound(snd_door_slam,80,false)
+			}
 			audio_stop_sound(snd_door_open)
 			
 			timer = 0

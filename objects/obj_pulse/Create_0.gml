@@ -12,12 +12,5 @@ col = -1
 
 r = 0
 
-if (IS_HTML5)
-{
-	surf = 0
-}
-else
-{
-	surf = surface_create(size,size)
-	surface_free(surf)
-}
+surf = surface_create(size,size)
+

@@ -1,11 +1,6 @@
 if (surface_alpha > 0)
 {
-	if (surface_exists(surf)) {
-		draw_surface_ext(surf,-b/2,-b/2,1,1,0,c_white,surface_alpha)
-	} else {
-		scout_overlay();
-	}
-	
+	draw_surface_ext(surf,-b/2,-b/2,1,1,0,c_white,surface_alpha)
 }
 
 //var str = string(window_get_width()) + " | " + string(window_get_height())

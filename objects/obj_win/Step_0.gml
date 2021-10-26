@@ -10,5 +10,5 @@ if (!audio_is_playing(snd_story_music))
 {
 	audio_play_sound(snd_story_music,100,true)
 	audio_sound_gain(snd_story_music,0,0)
-	audio_sound_gain(snd_story_music,1,2000)
+	audio_sound_gain(snd_story_music,1 * index_get_gain(global.music_volume_index,false),2000)
 }

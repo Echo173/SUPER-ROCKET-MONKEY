@@ -1,5 +1,5 @@
-x += lengthdir_x(spd,dir - 180)
-y += lengthdir_y(spd,dir - 180)
+//x += lengthdir_x(spd,dir - 180)
+//y += lengthdir_y(spd,dir - 180)
 
 image_angle = dir
 
@@ -9,3 +9,5 @@ image_xscale = size
 image_yscale = size
 
 size -= 0.01
+
+if (size <= 0) instance_destroy();

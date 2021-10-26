@@ -106,3 +106,32 @@ if (IS_HTML5)
 }
 
 old_target = target
+
+if (water_detail_timer <= 0)
+{
+	//water_detail_timer = irandom_range(10,20)
+	//switch (room)
+	//{
+	//	case rm_area_1:
+	//		var sdx = x + irandom_range(-width/1.5,width/1.5)
+	//		var sdy = y + irandom_range(-height/1.5,height/1.5)
+			
+	//		var snum = choose(0,0,1,1,2)
+			
+	//		if (!instance_position(sdx,sdy,obj_collision)) && (!instance_position(sdx,sdy,obj_ground))
+	//		{
+	//			for (var ii = 0; ii <= snum; ii += 1)
+	//			{
+	//				sdx += irandom_range(-16,16)
+	//				sdy += irandom_range(-16,16)
+	//				instance_create_layer(sdx, sdy,"Detail",obj_water_detail_1)
+	//			}
+	//		}
+	//		else
+	//		{
+	//			water_detail_timer = 0	
+	//		}
+	//		break;
+	//}	
+}
+water_detail_timer -= 1

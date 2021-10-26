@@ -7,8 +7,8 @@ switch (stage)
 		{
 			sound_init = 1
 			audio_play_sound(snd_title,100,false)
-			audio_play_sound(snd_explode,90,false)
 			audio_play_sound(snd_door_open,80,false)
+			audio_sound_gain(snd_door_open, 0.4 * index_get_gain(global.sound_volume_index,true),0)
 		}
 		
 		if (timer > 60)
@@ -33,6 +33,8 @@ switch (stage)
 			
 			audio_play_sound(snd_land,80,false)
 			
+			//audio_play_sound(snd_monkey_speak_1,100,false)
+			
 			alpha[1] = 1
 			scale[1] = 10
 			spd = 1
@@ -53,6 +55,7 @@ switch (stage)
 			{
 				shake_mag[1] = 8
 				
+				//audio_play_sound(snd_monkey_speak_2,100,false)
 				audio_play_sound(snd_land,80,false)
 			
 				alpha[2] = 1
@@ -77,8 +80,9 @@ switch (stage)
 			{
 				shake_mag[2] = 8
 				
-				audio_play_sound(snd_land,80,false)
-			
+				audio_play_sound(snd_land,80,false)	
+				//audio_play_sound(snd_monkey_speak_1,100,false)
+				
 				stage += 1
 				timer = 90
 			}
@@ -89,6 +93,10 @@ switch (stage)
 	case 4:
 		if (timer <= 0)
 		{
+			if (!audio_is_playing(snd_monkey_title)) {
+				audio_play_sound(snd_monkey_title,100,false)
+			}
+			
 			bg_alpha_white += 0.1
 			if (bg_alpha_white >= 1)
 			{

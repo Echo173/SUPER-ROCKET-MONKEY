@@ -65,7 +65,7 @@ if (death = true) || (warp = true) {
 }
 
 //Inputs
-key_scout = keyboard_check_pressed(vk_space)
+key_scout = keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_right)
 key_thrust = mouse_check_button(mb_left)
 
 if (state = "grounded") && (scouting = false)

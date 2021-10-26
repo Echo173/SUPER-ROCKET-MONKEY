@@ -8,8 +8,17 @@ if (audio_is_playing(snd_menu_music)) {
 	}
 }
 
+if (audio_is_playing(snd_level_music)) {
+	if (room != rm_area_1) && (room != rm_area_2) && (room != rm_area_3){
+		if (audio_sound_get_gain(snd_level_music) <= 0)
+		{
+			audio_stop_sound(snd_level_music);	
+		}
+	}
+}
+
 if (audio_is_playing(snd_story_music)) {
-	if (room != rm_win) {
+	if (room != rm_win) && (room != rm_story) {
 		if (audio_sound_get_gain(snd_story_music) <= 0)
 		{
 			audio_stop_sound(snd_story_music);	
@@ -17,7 +26,7 @@ if (audio_is_playing(snd_story_music)) {
 	}
 }
 
-if (room = rm_init) || (room = rm_transition) || (room = rm_main_menu) || (room = rm_win) {
+if (room = rm_init) || (room = rm_transition) || (room = rm_main_menu) || (room = rm_win) || (room = rm_story) {
 	exit;	
 }
 

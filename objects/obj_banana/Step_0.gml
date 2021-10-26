@@ -1,13 +1,10 @@
 switch (stage)
 {
 	case 0:
-		if (music_init = 0)
-		{
-			music_init = 1
-			if (audio_sound_get_gain(snd_level_final_music) != 0) {
-				audio_sound_gain(snd_level_final_music,0,0)
-			}
+		if (audio_sound_get_gain(snd_level_final_music) != 0) {
+			audio_sound_gain(snd_level_final_music,0,0)
 		}
+		
 		
 		hover_step += 1
 		hover_y = 4 + (sin(hover_step/20) * 2)
@@ -17,6 +14,8 @@ switch (stage)
 			audio_sound_gain(snd_level_music,0,2000)
 			audio_play_sound(snd_banana_get,100,false)
 			audio_sound_pitch(snd_banana_get,1)
+			audio_sound_gain(snd_banana_get,1*index_get_gain(global.sound_volume_index,true),0)
+			
 			global.is_cutscene = true
 			stage += 1
 			pulse_fx(80,20)
@@ -66,6 +65,8 @@ switch (stage)
 				
 				audio_play_sound(snd_banana_get,100,false)	
 				audio_sound_pitch(snd_banana_get,pitch)
+				audio_sound_gain(snd_banana_get,1*index_get_gain(global.sound_volume_index,true),0)
+				
 				pitch += 0.012
 			}
 			timer -= 1
@@ -103,6 +104,7 @@ switch (stage)
 			
 			audio_play_sound(snd_banana_get,100,false)
 			audio_sound_pitch(snd_banana_get,2)
+			audio_sound_gain(snd_banana_get,1*index_get_gain(global.sound_volume_index,true),0)
 		}
 		break;
 	

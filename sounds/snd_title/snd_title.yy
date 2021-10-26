@@ -1,4 +1,7 @@
 {
+  "ConfigValues": {
+    "HTML5": {"audioGroupId":"{\"name\":\"SoundFX\",\"path\":\"audiogroups/SoundFX\"}",},
+  },
   "compression": 0,
   "volume": 0.5,
   "preload": false,

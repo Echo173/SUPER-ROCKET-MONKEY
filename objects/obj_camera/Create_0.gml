@@ -20,10 +20,13 @@ b = 16
 w = 480 + b
 h = 270 + b
 
-surf = surface_create(w,h)
+water_detail_timer = 0
 
+surf = surface_create(w,h)
 function scout_overlay()
 {
+	surf = surface_create(w,h)
+	
 	surface_set_target(surf);
 	draw_clear_alpha(c_black,0.75);
 
@@ -39,5 +42,3 @@ function scout_overlay()
 
 	surface_reset_target();
 }
-
-scout_overlay();
