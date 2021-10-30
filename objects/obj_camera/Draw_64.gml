@@ -8,5 +8,14 @@ if (surface_alpha > 0)
 
 //str = string(display_get_width()) + " | " + string(display_get_height())
 
-//draw_text(2,2,global.is_cutscene)
-//draw_text(2,20,instance_exists(obj_fade_in))
+if (global.show_timer = true)
+{
+	var add_txt_s = ""
+	var add_txt_m = ""
+	if (global.secs < 10) add_txt_s = "0"
+	if (global.mins < 10) add_txt_m = "0"
+	var str = string(global.hrs) + ":" + add_txt_m + string(global.mins) + ":" + add_txt_s + string(global.secs)
+
+	var xpos = 240 - string_width("0:00:00.00")/2
+	draw_text(xpos,4,str)
+}

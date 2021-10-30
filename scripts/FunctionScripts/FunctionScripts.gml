@@ -30,12 +30,24 @@ function index_get_gain(index,is_sfx)
 				_g = 0
 				break;
 			case 1:
-				_g = 0.2
+				_g = 0.1
 				break;
 			case 2:
-				_g = 0.5
+				_g = 0.25
 				break;
 			case 3:
+				_g = 0.35
+				break;
+			case 4:
+				_g = 0.5
+				break;
+			case 5:
+				_g = 0.7
+				break;
+			case 6:
+				_g = 0.9
+				break;
+			case 7:
 				_g = 1
 				break;
 		}
@@ -51,10 +63,22 @@ function index_get_gain(index,is_sfx)
 				_g = 0.1
 				break;
 			case 2:
-				_g = 0.4
+				_g = 0.2
 				break;
 			case 3:
-				_g = 0.75
+				_g = 0.3
+				break;
+			case 4:
+				_g = 0.5
+				break;
+			case 5:
+				_g = 0.65
+				break;
+			case 6:
+				_g = 0.8
+				break;
+			case 7:
+				_g = 1
 				break;
 		}
 	}

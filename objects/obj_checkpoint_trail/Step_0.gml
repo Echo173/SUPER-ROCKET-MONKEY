@@ -1,3 +1,20 @@
+if (loaded = true)
+{
+	var _id;
+	with (obj_checkpoint)
+	{
+		if (global.checkpoint = checkpoint_index)
+		{
+			_id = id
+		}
+	}
+
+	x = _id.x
+	y = _id.y
+	
+	loaded = false
+}
+
 if (instance_exists(obj_fade_in)) {
 	if (obj_fade_in.timer > -5) {
 		exit;	

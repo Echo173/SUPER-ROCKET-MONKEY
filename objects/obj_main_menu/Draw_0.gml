@@ -1,26 +1,12 @@
-if (bg_alpha > 0) || (bg_alpha_white > 0)
-{
-	draw_set_color(c_black)
-	draw_set_alpha(bg_alpha)
-	draw_rectangle(0,0,room_width,room_height,false)
-	draw_set_color(c_white)
-	draw_set_alpha(bg_alpha_white)
-	draw_rectangle(0,0,room_width,room_height,false)
-	draw_set_alpha(1)
-}
-
-for (var ii = 0; ii < 5; ii += 1)
+for (var ii = 3; ii < 5; ii += 1)
 {
 	if (draw[ii] = true)
 	{
 		var spr = 0
 		switch (ii)
 		{
-			case 0: spr = spr_title_6 break;	
-			case 1: spr = spr_title_5 break;
-			case 2: spr = spr_title_4 break;
 			case 4: spr = spr_title_3 break;	
-			case 3: spr = spr_title_2 break;	
+			case 3: spr = spr_title_2 break;
 		}
 		
 		xpos[ii] += irandom_range(-shake_mag[ii],shake_mag[ii])

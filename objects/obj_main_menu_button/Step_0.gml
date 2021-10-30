@@ -11,6 +11,14 @@ if (clicked_anim = false)
 			_r.room_target = rm_main_menu
 			clicked_anim = true
 			
+			if !(IS_HTML5)
+			{
+				if (file_exists("SRM_savedata.save"))
+				{
+					file_delete("SRM_savedata.save");
+				}
+			}
+			
 			audio_sound_gain(snd_story_music,0,2000)
 		}
 	}

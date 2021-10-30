@@ -6,9 +6,11 @@ if (global.in_menu = true)
 		if (mouse_check_button_pressed(mb_left))
 		{
 			global.sound_volume_index += 1
-			if (global.sound_volume_index > 3) {
+			if (global.sound_volume_index > 7) {
 				global.sound_volume_index = 0	
 			}
+			
+			save_settings();
 			
 			var gain = index_get_gain(global.sound_volume_index,true)
 			audio_group_set_gain(SoundFX,gain,0)

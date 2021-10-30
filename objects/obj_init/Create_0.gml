@@ -22,10 +22,19 @@ global.hrs = 0
 global.in_menu = false
 global.death_count = 0
 
-global.music_volume_index = 2
-global.sound_volume_index = 2
+global.music_volume_index = 4
+global.sound_volume_index = 4
+global.show_timer = false
+
+global.main_menu_exit = false
+
+load_settings();
 
 global.tutorial_stage = 0
+
+global.is_load = false
+
+global.newgame_confirm = false
 tutorial_timer = 0
 
 tutorial_alpha = 0
@@ -52,3 +61,5 @@ randomize();
 
 audio_group_load(Music)
 audio_group_load(SoundFX)
+
+

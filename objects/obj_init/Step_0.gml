@@ -26,8 +26,9 @@ if (audio_is_playing(snd_story_music)) {
 	}
 }
 
-if (room = rm_init) || (room = rm_transition) || (room = rm_main_menu) || (room = rm_win) || (room = rm_story) {
-	exit;	
+//Menu reset
+if (room = rm_main_menu) {
+	global.main_menu_exit = false	
 }
 
 //Fix Layers
@@ -43,6 +44,10 @@ if (room = rm_area_3)
 else
 {
 	layer_init = 0
+}
+
+if (room = rm_init) || (room = rm_transition) || (room = rm_main_menu) || (room = rm_win) || (room = rm_story) {
+	exit;	
 }
 
 //Tutorial
@@ -207,6 +212,7 @@ if (init = 0)
 }
 else
 {
+	var old_checkpoint = global.checkpoint_id
 	var _id = noone
 	with (obj_checkpoint)
 	{
@@ -231,5 +237,11 @@ else
 		{
 			global.checkpoint_room = rm_area_3
 		}
+	}
+	
+	//Save
+	if (global.checkpoint_id != old_checkpoint)
+	{
+		save_game();	
 	}
 }

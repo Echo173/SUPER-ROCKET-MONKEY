@@ -1,11 +1,6 @@
 switch (stage)
 {
 	case 0:
-		if (audio_sound_get_gain(snd_level_final_music) != 0) {
-			audio_sound_gain(snd_level_final_music,0,0)
-		}
-		
-		
 		hover_step += 1
 		hover_y = 4 + (sin(hover_step/20) * 2)
 		
@@ -157,4 +152,18 @@ switch (stage)
 			timer = 0
 		}
 		break;
+}
+
+//Audio Fix
+if (stage <= 4)
+{
+	if (audio_sound_get_gain(snd_level_final_music) != 0) {
+		audio_sound_gain(snd_level_final_music,0,0)
+	}
+}
+else
+{
+	if (audio_sound_get_gain(snd_level_music) != 0) {
+		audio_sound_gain(snd_level_music,0,0)
+	}
 }

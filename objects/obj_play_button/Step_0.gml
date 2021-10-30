@@ -1,4 +1,4 @@
-if (obj_main_menu.stage >= 5)
+if (obj_main_menu.stage >= 5) && (IS_HTML5)
 {
 	visible = true
 	if (clicked_anim = false)
@@ -13,7 +13,7 @@ if (obj_main_menu.stage >= 5)
 				audio_sound_gain(snd_menu_music,0,2000)
 				
 				var _r = instance_create_layer(x,y,layer,obj_fade_out)
-				_r.room_target = rm_story
+				_r.room_target = rm_area_1
 				clicked_anim = true
 				
 				global.checkpoint = noone

@@ -17,9 +17,11 @@ if (global.is_respawn = true)
 	global.is_respawn = false
 	
 	var _id = noone
+	var _pbuff = 1
+	if (global.is_load = true) _pbuff = 0
 	with (obj_checkpoint)
 	{
-		if (global.checkpoint + 1 = checkpoint_index)
+		if (global.checkpoint + _pbuff = checkpoint_index)
 		{
 			_id = id
 		}
@@ -47,13 +49,18 @@ if (global.is_respawn = true)
 
 	guide_arrow = true
 	guide_arrow_dir = 1
-	guide_arrow_dir = guide_arrow_get_dir(max(0,global.checkpoint + 1))
+	guide_arrow_dir = guide_arrow_get_dir(max(0,global.checkpoint + _pbuff))
 	guide_arrow_stop = false
 	guide_arrow_stop_timer = 0
 	
 	warp = false
 	
-	global.disabled_checkpoint_id = _id
+	if (global.is_load = false)
+	{
+		global.disabled_checkpoint_id = _id
+	}
+	
+	global.is_load = false
 }
 
 //Death
@@ -68,7 +75,7 @@ if (death = true) || (warp = true) {
 key_scout = keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_right)
 key_thrust = mouse_check_button(mb_left)
 
-if (state = "grounded") && (scouting = false)
+if (state = "grounded") && (scouting = false) && (global.main_menu_exit = false) && (global.is_cutscene = false)
 {
 	if (keyboard_check_pressed(vk_escape)) || (keyboard_check_pressed(ord("P")))
 	{
@@ -80,12 +87,17 @@ if (state = "grounded") && (scouting = false)
 	}
 }
 
+if (global.is_cutscene = true)
+{
+	global.in_menu = false	
+}
+
 //Important vars
 var avg_spd = max(abs(xspd),abs(yspd))
 maxflash = clamp(point_distance(x,y,respawn_x,respawn_y)/8,30,90)
 
 //Scout
-if (key_scout) && (state = "grounded") && (!global.is_cutscene = true) && (!global.in_menu = true)
+if (key_scout) && (state = "grounded") && (global.is_cutscene = false) && (global.in_menu = false)
 {
 	if (scouting = true) {
 		scouting = false

@@ -7,10 +7,19 @@ goto_y = 0
 dist = -1
 
 init = 1
+if (global.checkpoint = 21) && (global.is_load = true) && (global.final_door = false)
+{
+	init = 0
+}
 
 timer = 5
 
 p_timer = 0
+
+loaded = false
+if (global.is_load = true) {
+	loaded = true	
+}
 
 if (global.is_respawn = true) & (room = rm_area_1)
 {
