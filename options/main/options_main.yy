@@ -1,4 +1,7 @@
 {
+  "ConfigValues": {
+    "Windows": {"option_lastchanged":"06 November 2021 13:40:38",},
+  },
   "option_gameguid": "c263a819-1c3b-4973-90fc-8a8b2d22a112",
   "option_gameid": "0",
   "option_game_speed": 60,
@@ -10,6 +13,9 @@
   "option_author": "",
   "option_lastchanged": "",
   "option_spine_licence": false,
+  "option_template_image": "template_image.png",
+  "option_template_icon": "template_icon.png",
+  "option_template_description": "Embark an epic adventure in this original Top Down Foddian experience that will put your supreme gaming abilities to the test. Can YOU gain control of this Monkey and his explosive propulsion device?",
   "resourceVersion": "1.2",
   "name": "Main",
   "tags": [],

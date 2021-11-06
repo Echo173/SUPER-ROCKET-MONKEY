@@ -1,6 +1,6 @@
 {
   "ConfigValues": {
-    "Windows": {"option_windows_display_cursor":"false",},
+    "Windows": {"option_windows_display_cursor":"false","option_windows_use_x64":"true","option_windows_description_info":"Embark an epic adventure in this original Top Down Foddian experience that will put your supreme gaming abilities to the test. Can YOU gain control of this Monkey and his explosive propulsion device?","option_windows_product_info":"SUPER ROCKET MONKEY","option_windows_company_info":"GreenBoxGames","option_windows_executable_name":"SuperRocketMonkey.exe","option_windows_display_name":"SUPER ROCKET MONKEY","option_windows_icon":"icons/icon.ico","option_windows_copyright_info":"© 2021 greenboxgames",},
   },
   "option_windows_display_name": "Created with GameMaker Studio 2",
   "option_windows_executable_name": "${project_name}.exe",

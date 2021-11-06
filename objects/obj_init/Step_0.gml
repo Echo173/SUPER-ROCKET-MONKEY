@@ -12,7 +12,12 @@ if (audio_is_playing(snd_level_music)) {
 	if (room != rm_area_1) && (room != rm_area_2) && (room != rm_area_3){
 		if (audio_sound_get_gain(snd_level_music) <= 0)
 		{
-			audio_stop_sound(snd_level_music);	
+			audio_stop_sound(snd_level_music);
+		}
+		
+		if (audio_sound_get_gain(snd_level_final_music) <= 0)
+		{
+			audio_stop_sound(snd_level_final_music);
 		}
 	}
 }

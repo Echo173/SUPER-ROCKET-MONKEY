@@ -1,6 +1,6 @@
 {
   "ConfigValues": {
-    "HTML5": {"option_html5_allow_fullscreen":"false","option_html5_texture_page":"512x512","option_html5_webgl":"2","option_html5_centregame":"true","option_html5_splash_png":"splash.png","option_html5_usesplash":"false","option_html5_display_cursor":"false",},
+    "HTML5": {"option_html5_allow_fullscreen":"false","option_html5_texture_page":"512x512","option_html5_webgl":"2","option_html5_centregame":"true","option_html5_splash_png":"splash.png","option_html5_usesplash":"false","option_html5_display_cursor":"false","option_html5_foldername":"SUPER ROCKET MONKEY","option_html5_browser_title":"SUPER ROCKET MONKEY","option_html5_icon":"fav.ico",},
   },
   "option_html5_browser_title": "Created with GameMaker Studio 2",
   "option_html5_version": "1.0.0.0",
